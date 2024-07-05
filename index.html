@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBartolome Resume</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+    <div class="wrap">
+        <main>
+            <div class="header-parent">
+                <img class="cv-selfie" src="pic.jpeg" alt="Resume Picture">
+                <ul class="cv-detail">
+                    <li>R. Bartolome</li>                
+                    <li>+63-945-185-7004</li>
+                    <li>rbartolome.learn@gmail.com</li>
+                </ul>
+            </div>
+            <h3>Employment History</h3>
+            <h4>Senior Technical Consultant</h4>
+            <h4>Company T (Feb 2022 - Mar 2023)</h4>
+            <p>
+                <ul>
+                    <li>Supports the Accounts Receivable Financing (ARF) application of Company U</li>                
+                    <li>Involved in the installation, configuration, deployment and support of various technical upgrades
+                        namely, Oracle HTTP Server, Weblogic Server, Oracle Database, Hardware Upgrade and AIX
+                        upgrade</li>
+                    <li>Develops shell scripts to automate tasks</li>
+                    <li>Tests the enhancements/fixes in the Systems Integration Test environment</li>
+                    <li>Liaise with the testers/users during the User Acceptance Testing phase and addresses any concerns/issues encountered</li>
+                    <li>Acts as a bridge between the vendor and the bank's users/testers</li>
+                    <li>Deploys the enhancements/fixes to Production and serves as the Level 3 support</li>
+                    <li>Attends to any adhoc queries raised by the user / Level 2 support</li>
+                </ul>           
+            </p>
+            <h4>Technical Consultant</h4>
+            <h4>Company S (Jul 2017 - Nov 2021)</h4>
+            <p>
+                <ul>
+                    <li>Primarily involved in the Trade Finance application of a multinational banking and financial services corporation</li>
+                    <li>Develops enhancements using Cobol, CICS and Java (enhancements are mainly geared towards automation of tasks and systems integration via REST/SOAP API)</li>
+                    <li>Prepares the documents needed for the enhancements (Release Notes and Installation Guide)</li>
+                    <li>Performs on-site / client site support (ranging from a day to 2 months) during UAT, Deployment and Post-Production</li>
+                    <li>Attends to any queries raised by the client’s Trade Operations Team</li>
+                </ul>           
+            </p>
+            <div>
+                <p style = "text-align: center;" id="count"></p>
+            </div>
+        </main>
+    </div>
+</body>        
+</html>
+<script>
+    const ctr = document.getElementById('count');
+    updateCount();
+  
+    function updateCount() {
+      fetch('https://e0rrb6f3s0.execute-api.us-east-1.amazonaws.com/dev', {
+        method: 'POST'
+      })
+        .then(res => res.json())
+        .then(res => {
+          ctr.innerHTML = "Viewer Count: " + res.counter
+        })
+    };
+  </script>

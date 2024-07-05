@@ -1,0 +1,23 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.cv-selfie {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+}
+
+.cv-detail {
+    font-size: 20px;   
+    list-style: none;
+}
+
+h4 {
+    margin: 0;
+}
